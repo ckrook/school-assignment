@@ -5,13 +5,17 @@ function Layout() {
   return (
     <div>
       <header>
-        <h1>Animal Zoo</h1>
+        <div className="h-20 flex items-center justify-center">
+          <h1 className="font-bold text-2xl">Animal Zoo</h1>
+        </div>
       </header>
-      <main>
+      <main className="p-[10px]">
         <Outlet></Outlet>
       </main>
       <footer>
-        <p>footer</p>
+        <div className="h-20 flex items-center justify-center">
+          <h1 className="font-bold text-2xl">Footer</h1>
+        </div>
       </footer>
     </div>
   );

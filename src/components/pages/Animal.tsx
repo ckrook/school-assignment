@@ -64,11 +64,11 @@ function Animal() {
 
   return (
     <div>
-      <div className="w-[600px] mx-auto">
+      <div className="w-[95%] md:w-[80%] lg:w-[600px] mx-auto">
         <Link to="/">
           <Button variant="contained">Go Home</Button>
         </Link>
-        <h2>{animal?.name}</h2>
+        <h2 className="text-2xl uppercase py-4">{animal?.name}</h2>
         <img
           className="mb-5"
           src={animal?.imageUrl}
@@ -107,8 +107,8 @@ function Animal() {
           Djuret matades: {animal?.lastFed.split("T")[0]} klockan{" "}
           {animal?.lastFed.split("T")[1].split(".")[0]}
         </p>
-        <div className="flex items-center">
-          Medicin:
+        <div className="flex items-center my-4">
+          <span>Medicin:</span>
           <Chip label={animal?.medicine} />
         </div>
         <p>{animal?.longDescription}</p>
